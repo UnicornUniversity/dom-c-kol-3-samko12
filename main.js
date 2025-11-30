@@ -1,10 +1,3 @@
-/**
- * Generovanie random zamestnancov.
- * @param {Object} dtoIn
- * @returns {Array}
- */
-
-
 const dtoIn = {
   count: 6,
   age: {
@@ -29,6 +22,11 @@ const surnames = [
 ];
 const gender = ["male", "female"];
 const workload = [10, 20, 30, 40];
+/**
+ * Generovanie random zamestnancov.
+ * @param {object} dtoIn - vstupné parametre
+ * @returns {Array<object>} - vygenerované osoby
+ */
 export function main(dtoIn) {
   const dtoOut = [];
   const count = dtoIn.count;
