@@ -1,20 +1,8 @@
 /**
- * Vygeneruje zoznam náhodných osôb podľa vstupných parametrov.
- * @param {Object} dtoIn - Vstupný objekt s parametrami
- * @param {number} dtoIn.count - Počet generovaných záznamov
- * @param {Object} dtoIn.age - Vekový rozsah
- * @param {number} dtoIn.age.min - Minimálny vek
- * @param {number} dtoIn.age.max - Maximálny vek
- * @returns {Array<Object>} - Vygenerované osoby
+ * Generovanie random zamestancov.
+ * @param {Object} dtoIn
+ * @returns {Array}
  */
-
-const dtoIn = {
-  count: 6,
-  age: {
-    min: 19,
-    max: 35,
-  },
-};
 const names = [
   "Jan","Petr","Pavel","Martin","Tomáš","Jakub","Lukáš","Jiří","David","Josef",
   "Adam","Matěj","Filip","Václav","Daniel","Marek","Jaroslav","Štěpán","Ondřej","Karel",
