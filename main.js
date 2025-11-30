@@ -41,3 +41,4 @@ export function main(dtoIn) {
   }
   return dtoOut;
 }
+console.log(main(dtoIn));
