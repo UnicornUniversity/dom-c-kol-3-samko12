@@ -18,10 +18,6 @@ const surnames = [
 const gender = ["male", "female"];
 const workload = [10, 20, 30, 40];
 
-const dtoIn = {
-  count: 6,
-  age: { min: 19, max: 35 }
-};
 
 export function main(dtoIn) {
   const dtoOut = [];
