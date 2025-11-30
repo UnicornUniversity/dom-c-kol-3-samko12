@@ -28,16 +28,14 @@ const workload = [10, 20, 30, 40];
 export function main(dtoIn) {
   const dtoOut = [];
   const count = dtoIn.count;
-
-  const currentYear = 2025;
+  const currentYear = new Date().getFullYear();
 
   for (let i = 0; i < count; i++) {
-
-
+    // age
     const randomAge = Math.floor(Math.random() * (dtoIn.age.max - dtoIn.age.min + 1)) + dtoIn.age.min;
-
     const birthYear = currentYear - randomAge;
 
+    // month and day padded
     const month = String(Math.floor(Math.random() * 12) + 1).padStart(2, "0");
     const day = String(Math.floor(Math.random() * 28) + 1).padStart(2, "0");
 
@@ -54,6 +52,3 @@ export function main(dtoIn) {
 
   return dtoOut;
 }
-
-
-console.log(main());
