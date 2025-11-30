@@ -38,8 +38,8 @@ export function main(dtoIn) {
 
     const birthYear = currentYear - randomAge;
 
-    const month = Math.floor(Math.random() * 12) + 1;
-    const day = Math.floor(Math.random() * 28) + 1;
+    const month = String(Math.floor(Math.random() * 12) + 1).padStart(2, "0");
+    const day = String(Math.floor(Math.random() * 28) + 1).padStart(2, "0");
 
     const birthdate = `${birthYear}-${month}-${day}T00:00:00.000Z`;
 
