@@ -25,7 +25,7 @@ const surnames = [
 const gender = ["male", "female"];
 const workload = [10, 20, 30, 40];
 
-export function main() {
+export function main(dtoIn) {
   const dtoOut = [];
   const count = dtoIn.count;
 
