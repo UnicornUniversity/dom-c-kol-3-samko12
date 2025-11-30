@@ -1,3 +1,13 @@
+/**
+ * Vygeneruje zoznam náhodných osôb podľa vstupných parametrov.
+ * @param {Object} dtoIn - Vstupný objekt s parametrami
+ * @param {number} dtoIn.count - Počet generovaných záznamov
+ * @param {Object} dtoIn.age - Vekový rozsah
+ * @param {number} dtoIn.age.min - Minimálny vek
+ * @param {number} dtoIn.age.max - Maximálny vek
+ * @returns {Array<Object>} - Vygenerované osoby
+ */
+
 const dtoIn = {
   count: 6,
   age: {
