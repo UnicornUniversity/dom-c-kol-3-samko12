@@ -1,10 +1,3 @@
-const dtoIn = {
-  count: 6,
-  age: {
-    min: 19,
-    max: 35,
-  },
-};
 
 const names = [
   "Jan","Petr","Pavel","Martin","Tomáš","Jakub","Lukáš","Jiří","David","Josef",
@@ -25,35 +18,31 @@ const surnames = [
 const gender = ["male", "female"];
 const workload = [10, 20, 30, 40];
 
-function main() {
-  const dtoOut = [];
-  const count = dtoIn.count;
+const dtoIn = {
+  count: 6,
+  age: { min: 19, max: 35 }
+};
 
+export function main(dtoIn) {
+  const dtoOut = [];
   const currentYear = 2025;
 
-  for (let i = 0; i < count; i++) {
-
-
+  for (let i = 0; i < dtoIn.count; i++) {
     const randomAge = Math.floor(Math.random() * (dtoIn.age.max - dtoIn.age.min + 1)) + dtoIn.age.min;
-
     const birthYear = currentYear - randomAge;
-
     const month = Math.floor(Math.random() * 12) + 1;
     const day = Math.floor(Math.random() * 28) + 1;
-
-    const birthdate = `${birthYear}-${month}-${day}T00:00:00.000Z`;
 
     dtoOut.push({
       name: names[Math.floor(Math.random() * names.length)],
       surname: surnames[Math.floor(Math.random() * surnames.length)],
       gender: gender[Math.floor(Math.random() * gender.length)],
       workload: workload[Math.floor(Math.random() * workload.length)],
-      birthdate: birthdate,
+      birthdate: new Date(`${birthYear}-${month}-${day}`).toISOString()
     });
   }
 
-  return dtoOut;
+  return { employeeList: dtoOut };
 }
 
-
-console.log(main());
+console.log(main(dtoIn));
