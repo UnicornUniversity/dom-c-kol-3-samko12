@@ -1,10 +1,3 @@
-const dtoIn = {
-  count: 6,
-  age: {
-    min: 19,
-    max: 35,
-  },
-};
 const names = [
   "Jan","Petr","Pavel","Martin","Tomáš","Jakub","Lukáš","Jiří","David","Josef",
   "Adam","Matěj","Filip","Václav","Daniel","Marek","Jaroslav","Štěpán","Ondřej","Karel",
